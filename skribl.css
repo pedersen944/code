@@ -1,8 +1,16 @@
 body {
     /* stil */
-    background-color: darkblue;
+    background-color: white;
     
     color: tomato;
     clear: left;
     margin-left: 20px;
+    float: left;    
+}
+h1{
+    border-style: groove; border-color: white; border-radius: 100px; border-width: 1px; 
+}
+ul{
+    border-style:solid;
+    border-color: violet;
 }
