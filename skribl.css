@@ -14,3 +14,9 @@ ul{
     border-style:solid;
     border-color: violet;
 }
+div{
+    float: left;
+    clear: left;
+    border-style: dotted;
+    border-color: yellowgreen;
+}
