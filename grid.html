@@ -12,12 +12,12 @@
         div.page{
             height: 100vh;
             display: grid;
-            grid-template-columns:200px 1fr   ;
+            grid-template-columns: 200px 1fr  ;
             grid-template-rows: 20px 10fr 20px ;
             grid-template-areas: 'menu header'
                                  'menu mainContent'
                                  'footer footer';
-        }
+        } console.log(grid-template-areas)
         div.header{
             background-color: aqua;
             grid-area: header;
@@ -31,7 +31,7 @@
             grid-area: mainContent ;
         }
         div.footer{
-            background-color: lightgreen;
+            background-color: red;
             grid-area: footer ;
         }
         @media only screen and (max-width: 600px) {
