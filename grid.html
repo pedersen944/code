@@ -12,18 +12,38 @@
         div.page{
             height: 100vh;
             display: grid;
+            grid-template-columns:200px 1fr   ;
+            grid-template-rows: 20px 10fr 20px ;
+            grid-template-areas: 'menu header'
+                                 'menu mainContent'
+                                 'footer footer';
         }
         div.header{
             background-color: aqua;
+            grid-area: header;
         }
         div.menu{
             background-color: aquamarine;
+            grid-area: menu ;
         }
         div.mainContent{
             background-color: blanchedalmond;
+            grid-area: mainContent ;
         }
         div.footer{
             background-color: lightgreen;
+            grid-area: footer ;
+        }
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 20px 1fr 4fr 20px;
+                grid-template-areas: 'header' 
+                                     'menu'
+                                     'mainContent'
+                                     'footer';
+            }
+
         }
     </style>
 </head>
