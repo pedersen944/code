@@ -31,3 +31,7 @@ path.hatt{
     stroke-width: 0,3px;
     fill: pink;
 }
+line.kosteskaft{
+    stroke: brown;
+    stroke-width: 1,1px;
+}
