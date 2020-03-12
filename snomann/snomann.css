@@ -26,3 +26,8 @@ circle.knapp{
 polygon.gulrot{
     fill: orange;
 }
+path.hatt{
+    stroke:black;
+    stroke-width: 0,3px;
+    fill: pink;
+}
