@@ -7,9 +7,9 @@
 </head>
 <body>
     <p>Hva er 3+5?</p>
-    <h2 onclick='Alt1()' id="Alt1">A) 6</h2>
-    <h2 onclick='Alt2()' id="Alt2">B) 7</h2>
-    <h2 onclick='Alt3()' id="Alt3">C) 8</h2>
+    <button onclick='Alt1()' id="Alt1">A) 6</button>
+    <button onclick='Alt2()' id="Alt2">B) 7</button>
+    <button onclick='Alt3()' id="Alt3">C) 8</button>
     
     
     <script>
@@ -18,12 +18,11 @@
         document.getElementById('Alt1').innerHTML='feil'
     }
 
+         function Alt3(){
+        document.getElementById('Alt3').innerHTML= 'riktig'
+    }
         function Alt2(){
         document.getElementById('Alt2').innerHTML= 'feil'
-    }
-
-        function Alt3(){
-        document.getElementById('Alt3').innerHTML= 'riktig'
     }
     </script>
 </body>
