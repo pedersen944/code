@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <p>Hva er 3+5?</p>
+    <h2 onclick='Alt1()' id="Alt1">A) 6</h2>
+    <h2 onclick='Alt2()' id="Alt2">B) 7</h2>
+    <h2 onclick='Alt3()' id="Alt3">C) 8</h2>
+    
+    
+    <script>
+        
+        function Alt1(){
+        document.getElementById('Alt1').innerHTML='feil'
+    }
+
+        function Alt2(){
+        document.getElementById('Alt2').innerHTML= 'feil'
+    }
+
+        function Alt3(){
+        document.getElementById('Alt3').innerHTML= 'riktig'
+    }
+    </script>
+</body>
+</html>
