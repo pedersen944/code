@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Puslespill</title>
+    <style>
+        div.container{
+            float: left;
+        }
+    </style>
+
 </head>
-<body>
+<body> 
+    
+    
+    <div style= heigth"80px" width="100px"' onclick="putin(this)"><img src="Peng1.png"/><br/></div>
+    <div onclick="putin(this)"><img src="Peng2.png"/><br/></div>
+    <div id="container"></div>
+
+
+   
+    <script>
+        function putin(flytt) {
+            document.getElementById('container').innerHTML +=  flytt.innerHTML ;
+        }
+        
+
+
+    </script>
     
 </body>
 </html>
