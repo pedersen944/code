@@ -6,27 +6,64 @@
     <title>Puslespill</title>
     <style>
         div.container{
+            font-size: 0px;
+        }
+
+       
+
+        img {
+
             float: left;
+            clear: both;
+            font-size: 10px;
         }
     </style>
 
 </head>
 <body> 
-    
-    
-    <div style= heigth"80px" width="100px"' onclick="putin(this)"><img src="Peng1.png"/><br/></div>
-    <div onclick="putin(this)"><img src="Peng2.png"/><br/></div>
+    <button onclick='reset()'>reset</button>
+    <div id="holder" onclick="putin(this)"><img src="Peng1.png"/></div>
+    <div onclick="putin(this)"><img src="Peng2.png"/></div>
     <div id="container"></div>
 
 
    
     <script>
-        function putin(flytt) {
-            document.getElementById('container').innerHTML +=  flytt.innerHTML ;
+        var x = 0;
+        
+        function putin(flytt){ 
+        count();    
+        if (x<=2) {
+                document.getElementById('container').innerHTML +=  flytt.innerHTML ;
+            }
+            
+
+
+            
         }
+
+
+       function reset() {
+           document.getElementById('container').innerHTML = ' ';
+       } 
+
         
 
+        function count() {
+            x++;    
+        
 
+        }
+        
+        
+        
+     
+    
+    
+
+             
+        
+    
     </script>
     
 </body>
