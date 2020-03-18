@@ -19,17 +19,17 @@
   <h1>KEYLOCK</h1>
     
     
-    <p class="tall1" onclick="knapp1(this)">1</p>
-    <button id="tall2" onclick="knapp2(this)">2</button>
-    <button id="tall3" onclick="knapp3(this)">3</button><br/>
+    <button class="tall1" onclick="knapp(this)">1</button>
+    <button id="tall2" onclick="knapp(this)">2</button>
+    <button id="tall3" onclick="knapp(this)">3</button><br/>
     
-    <button id="tall4" onclick="knapp4(this)">4</button>
-    <button id="tall5" onclick="knapp5(this)">5</button>
-    <button id="tall6" onclick="knapp6(this)">6</button><br/>
+    <button id="tall4" onclick="knapp(this)">4</button>
+    <button id="tall5" onclick="knapp(this)">5</button>
+    <button id="tall6" onclick="knapp(this)">6</button><br/>
     
-    <button id="tall7" onclick="knapp7(this)">7</button>
-    <button id="tall8" onclick="knapp8(this)">8</button>
-    <button id="tall9" onclick="knapp9(this)">9</button>
+    <button id="tall7" onclick="knapp(this)">7</button>
+    <button id="tall8" onclick="knapp(this)">8</button>
+    <button id="tall9" onclick="knapp(this)">9</button>
 
   
   <p id="resultat">resultat</p>
@@ -41,36 +41,13 @@
 
   function resultat(result){
     
-    document.getElementById('resultat').innerHTML +=knapp1.innerHTML;
+    document.getElementById('resultat').innerHTML +=knapp.innerHTML;
   }
 
-  function knapp1(trykk){
-      num1++;
+  function knapp(trykk){
+      num1;
   }
-  function knapp2(){
-      num1++;
-  }
-  function knapp3(){
-      num1++;
-  }
-  function knapp4(){
-      num4;
-  }
-  function knapp5(){
-      num5;
-  }
-  function knapp6(){
-      num6;
-  }
-  function knapp7(){
-      num7;
-  }
-  function knapp8(){
-      num8;
-  }
-  function knapp9(){
-      num9;
-  }
+  
 </script>
 </body>
 </html>
