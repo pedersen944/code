@@ -7,23 +7,19 @@
 </head>
 <body>
 
-    <h1 id="alert" onkeydown="keydown(trykk)"> </h1>
-    <button onclick="trykkert()">trykk her</button>
+    <h1 id="alert" onload="keydown()"> </h1>
+    
     <div id="loggert">Klokken er </div>
     
     <script>
-       alert ('hei');
-        alert ('hopp');
-
-
-        function trykkert(press){
-           var d= new Date();
-           var n= d.toTimeString();
+       
+          var d= new Date();
+           var n=d.toTimeString();
            document.getElementById('loggert').innerHTML +=d+n;
-           
-        }
-        
-     
+
+        function keydown(alert){
+        n.innerText +=  + new Date().toTimeString() ;
+    }
 
 
     </script>
