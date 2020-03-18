@@ -17,65 +17,58 @@
   </head>
 <body>
   <h1>KEYLOCK</h1>
-    <div id="lås">
     
-    <button class="tall" onclick="key1(this)">1</button>
-    <button class="tall" onclick="key2(this)">2</button>
-    <button class="tall" onclick="key3(this)">3</button><br/>
     
-    <button class="tall" onclick="key4(this)">4</button>
-    <button class="tall" onclick="key5(this)">5</button>
-    <button class="tall" onclick="key6(this)">6</button><br/>
+    <p class="tall1" onclick="knapp1(this)">1</p>
+    <button id="tall2" onclick="knapp2(this)">2</button>
+    <button id="tall3" onclick="knapp3(this)">3</button><br/>
     
-    <button class="tall" onclick="key7(this)">7</button>
-    <button class="tall" onclick="key8(this)">8</button>
-    <button class="tall" onclick="key9(this)">9</button>
+    <button id="tall4" onclick="knapp4(this)">4</button>
+    <button id="tall5" onclick="knapp5(this)">5</button>
+    <button id="tall6" onclick="knapp6(this)">6</button><br/>
+    
+    <button id="tall7" onclick="knapp7(this)">7</button>
+    <button id="tall8" onclick="knapp8(this)">8</button>
+    <button id="tall9" onclick="knapp9(this)">9</button>
 
-  </div>
-  <p id="resulta">resultat</p>
+  
+  <p id="resultat">resultat</p>
 <script>
-  console.log
-  var x=0 ;
-  var num1=1 ;
-  var num2=2 ;
-  var num3=3 ;
-  var num4=4 ;
-  var num5=5 ;
-  var num6=6 ;
-  var num7=7 ;
-  var num8=8 ;
-  var num9=9 ;
+  
+    var x=0 ;
+    var num1=0 ;
+  
 
   function resultat(result){
-    console.log
-    document.getElementById('resulta').innerHTML = this;
+    
+    document.getElementById('resultat').innerHTML +=knapp1.innerHTML;
   }
 
-  function key1(){
-      num1;
+  function knapp1(trykk){
+      num1++;
   }
-  function key2(){
-      num2;
+  function knapp2(){
+      num1++;
   }
-  function key3(){
-      num3;
+  function knapp3(){
+      num1++;
   }
-  function key4(){
+  function knapp4(){
       num4;
   }
-  function key5(){
+  function knapp5(){
       num5;
   }
-  function key6(){
+  function knapp6(){
       num6;
   }
-  function key7(){
+  function knapp7(){
       num7;
   }
-  function key8(){
+  function knapp8(){
       num8;
   }
-  function key9(){
+  function knapp9(){
       num9;
   }
 </script>
