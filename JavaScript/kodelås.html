@@ -45,7 +45,7 @@
   function knapp(trykk) {
     var num1 = trykk.innerHTML ;  
     console.log(num1);
-    document.getElementById("resultat").innerHTML = knapp.innerHTML ;
+    document.getElementById("resultat").innerHTML += knapp.innerHTML ;
 
     if (document.getElementById("resultat").innerText == '3812') {
         document.getElementById("resultat").innerText = "WIN";
