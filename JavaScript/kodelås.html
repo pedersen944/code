@@ -19,24 +19,23 @@
   <h1>KEYLOCK</h1>
     
     <div>
-    <button id="tall" onclick="knapp(this)">1</button>
-    <button id="tall" onclick="knapp(this)">2</button>
-    <button id="tall" onclick="knapp(this)">3</button><br/>
+    <button id="1" onclick="knapp(this)">1</button>
+    <button id="2" onclick="knapp(this)">2</button>
+    <button id="3" onclick="knapp(this)">3</button><br/>
     
-    <button id="tall" onclick="knapp(this)">4</button>
-    <button id="tall" onclick="knapp(this)">5</button>
-    <button id="tall" onclick="knapp(this)">6</button><br/>
+    <button id="4" onclick="knapp(this)">4</button>
+    <button id="5" onclick="knapp(this)">5</button>
+    <button id="6" onclick="knapp(this)">6</button><br/>
     
-    <button id="tall" onclick="knapp(this)">7</button>
-    <button id="tall" onclick="knapp(this)">8</button>
-    <button id="tall" onclick="knapp(this)">9</button>
+    <button id="7" onclick="knapp(this)">7</button>
+    <button id="8" onclick="knapp(this)">8</button>
+    <button id="9" onclick="knapp(this)">9</button>
   </div>
   
-  <p id="resultat">resultat</p>
+  <div id='resultat'></div>
 <script>
   
-    var x=0 ;
-    var num1=0 ;
+   
   
 
   
@@ -45,11 +44,12 @@
   function knapp(trykk) {
     var num1 = trykk.innerHTML ;  
     console.log(num1);
-    document.getElementById("resultat").innerHTML += knapp.innerHTML ;
+    document.getElementById('resultat').innerHTML += trykk.innerHTML ;
 
     if (document.getElementById("resultat").innerText == '3812') {
         document.getElementById("resultat").innerText = "WIN";
     }
+    
   }
 </script>
 </body>
