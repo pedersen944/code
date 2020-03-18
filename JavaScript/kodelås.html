@@ -12,7 +12,7 @@
           font-size: large;
         }
 
-
+        
     </Style>
   </head>
 <body>
@@ -34,20 +34,14 @@
   
   <div id='resultat'></div>
 <script>
-  
-   
-  
-
-  
-
-  
+  var num1=0;
   function knapp(trykk) {
     var num1 = trykk.innerHTML ;  
     console.log(num1);
     document.getElementById('resultat').innerHTML += trykk.innerHTML ;
 
     if (document.getElementById("resultat").innerText == '3812') {
-        document.getElementById("resultat").innerText = "WIN";
+        document.getElementById("resultat").innerText = "document.getFucked.innerHTML";
     }
     
   }
