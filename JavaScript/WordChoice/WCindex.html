@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.setning {
+    font-size: 16px;
+    display:inline-block;
+}
+div.choice{
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="setning">
+    <div style="font-size: large;" >Hjelp meg med <div id="valg1">____</div> det er en <div id='valg2'>_____</div> i hagen, det er i grunn <div id="valg3">____</div>.  </div>
+    </div>
+    <br/>
+<div id="alt1" class="choice" onclick="trykk1(this)">gjødsel</div>
+<div id="alt2" class="choice" onclick="trykk2(this)">sparkel</div>
+<div id="alt3" class="choice" onclick="trykk3(this)">spermhval</div>
+<div id="alt4" class="choice" onclick="trykk4(this)">stav</div>
+<div id="alt5" class="choice" onclick="trykk5(this)">artig</div>
+<div id="alt6" class="choice" onclick="trykk6(this)">merkverdig</div>
+<script>
+    var w1= 'gjødsel';
+     
+    var w3= 'spermhval';
+    var w2= 'sparkel';
+    var w4= 'stav';
+    var w5= 'artig';
+    var w6= 'merkverdig';
+
+    function trykk1(){
+       
+        document.getElementById('valg1').innerHTML=this.innerHTML=w1
+        ;
+    }
+    function trykk2(){    
+        document.getElementById('valg1').innerHTML=this.innerHTML=w2;
+        
+    }
+    function trykk3(){
+        document.getElementById('valg2').innerHTML=this.innerHTML=w3;
+    }
+    function trykk4(){
+        document.getElementById('valg2').innerHTML=this.innerHTML=w4;
+    }
+    function trykk5(){
+        document.getElementById('valg3').innerHTML=this.innerHTML=w5;
+    }
+    function trykk6(){
+        document.getElementById('valg3').innerHTML=this.innerHTML=w6;
+    }
+    
+</script>
+
+</body>
+</html>
