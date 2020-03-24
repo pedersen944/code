@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
+
+<body>
+
+<div>
+<p>Rosemary, Rosmarinus -</p>
+<p id="answer1">
+    ___
+</p>
+- .
+
+<select  id="boks1">
+    <option> </option>
+    <option onchange="offi(this)">Officinalis</option>
+    <option>Robur</option>
+</select>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p>Belongs to the -</p>
+<p id="answer2">
+    ___
+</p>
+- family.
+
+<select id="boks2">
+    <option> </option>
+    <option>Lily</option>
+    <option onchange="answer(mint)">Mint</option>
+</select>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<p>Grows -</p>
+<p id="answer3">
+    ___
+</p>
+- on the hillsides of southern Mediterranian countries.
+
+<select id="boks3">
+    <option> </option>
+    <option onchange="answer(bush)">as a bush on dry scrub land</option>
+    <option>wild, on limestone with very little soil</option>
+</select>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<img src="https://www.yates.com.au/content/dam/yates/plants/herbs/pr-tn-herb-rosemary.jpg/_jcr_content/renditions/cq5dam.thumbnail.800.800.png.transform/q/image.jpg">
+<br/>
+<br/>
+<p>
+    Parts used are the leaves, and use them fresh if you can. <br/>
+    Properties: Diuretic, antiseptic, astringent and wound healing. <br/>
+    It is antidepressant, tonic and calms the nerves. <br/>
+    It is aromatic, stimulates the liver and digestion and is good for the intestines. <br/>
+    Wards off evil energies, and  taste fantastic :)
+</p>
+<br/>
+<br/>
+<br/>
+
+</div>
+
+
+
+<script>
+
+    
+
+var line1 = 'Officinalis';
+var linetwo = document.getElementById('answer2');
+var linethree = document.getElementById('answer3');
+
+function offi(this) {
+    document.getElementById('answer1').innerText=this.innerHTML=line1;
+}
+function mint()
+
+function bush()
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

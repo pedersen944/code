@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Looks.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="maincontent">Det var en gang en <span id="option1">_____</span> <span id="option2">______</span> <span id="option3">_____</span> som alle likte.<span></span> </h1>
+    <div class="btn">
+        <button id="s1" onclick="valg1(o1)">Liten</button> <button id="s2" onclick="valg2(o1)">Stor</button> <br>
+        <button id="s3" onclick="valg3(o2)">Morsom</button><button id="s4" onclick="valg4(o2)">Pen</button> <br>
+        <button id="s5" onclick="valg5(o3)">Gutt</button><button id="s6" onclick="valg6(o3)">Jente</button> <br>
+    </div>
+    
+    <script>
+        var o1 = document.getElementById("option1");
+        var o2 = document.getElementById("option2");
+        var o3 = document.getElementById("option3");
+        var s1 = document.getElementById("s1"); var s2 = document.getElementById("s2");
+        var s3 = document.getElementById("s3"); var s4 = document.getElementById("s4");
+        var s5 = document.getElementById("s5"); var s6 = document.getElementById("s6");
+        function valg1(opt1) {
+            opt1.innerHTML = s1.innerHTML;
+        }
+        function valg2(opt2) {
+            opt2.innerHTML = s2.innerHTML;
+        }
+        function valg3(opt3) {
+            opt3.innerHTML = s3.innerHTML;
+        }
+        function valg4(opt4) {
+            opt4.innerHTML = s4.innerHTML;
+        }
+        function valg5(opt5) {
+            opt5.innerHTML = s5.innerHTML;
+        }
+        function valg6(opt6) {
+            opt6.innerHTML = s6.innerHTML;
+        }
+
+
+    </script>
+</body>
+</html>

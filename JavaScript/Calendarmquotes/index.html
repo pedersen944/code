@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+
+        <p id="kvote"></p>
+    
+        <p id="day" onload="theday()"></p>
+    
+    </div>
+    <button id="cycle">cycle</button>
+    
+    <script>
+    
+    var day = document.getElementById('day')
+    var d = new Date();
+var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+var sitat = ""
+var sitat1 = ""
+var sitat2 = "In this moment, I am euphoric. Not because of any phony god's blessing, but because I am enlightened by my own intelligence."
+var sitat3 = ""
+var sitat4 = ""
+var sitat5 = ""
+var sitat6 = ""
+var n = weekday[d.getDay()];
+    day.innerHTML=n;
+   
+    if (Array([0])) kvote.innerHTML=sitat
+    if (Array([1])) kvote.innerHTML=sitat1
+    if (Array([2])) kvote.innerHTML=sitat2
+    if (Array([3])) kvote.innerHTML=sitat3
+    if (Array([4])) kvote.innerHTML=sitat4
+    if (Array([5])) kvote.innerHTML=sitat5
+    if (Array([6])) kvote.innerHTML=sitat6
+
+    
+    </script>
+
+
+</body>
+</html>
