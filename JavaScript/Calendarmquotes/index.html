@@ -36,18 +36,19 @@
     
         <p id="day" >dag</p>
         
-        
+        <button onclick="knapp3()"></button>
     </div>
     
     
     <script>
     var date= new Date();
     var today;
-    var day=document.getElementById('day');
-    var kvote=document.getElementById('kvote');
+    var day= document.getElementById('day');
+    var kvote= document.getElementById('kvote');
     function theday() {
         today = date.getDay();
         dato();
+        
         }
         function dato(){
 if (1 == today) {
@@ -80,12 +81,20 @@ if (6 == today) {
             kvote.innerHTML = 'Förfest på min altan';
 }
         
-if (0 == today) {
+if (7 == today) {
             day.innerHTML = 'Søndag';
             kvote.innerHTML = 'On the outside i skrrt skrrt,<br/>but on the inside i hurt hurt ';
 }
         
+function knapp3() {
+            if (date <7){
+                today+1;
+            }
 
+            }
+            
+        dato();
+        
 
 
     

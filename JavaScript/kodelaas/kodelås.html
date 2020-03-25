@@ -35,15 +35,21 @@
   <div id='resultat'></div>
 <script>
   var num1=0 ;
+  var correctCode = '3812' ;
+  var enteredSoFar = '' ;
+  
   function knapp(trykk) {
+    enteredSoFar+=trykk.innerHTML;
     var num1 = trykk.innerHTML ;  
-    console.log(num1);
+    console.log(num1, enteredSoFar);
     document.getElementById('resultat').innerHTML += trykk.innerHTML ;
 
-    if (document.getElementById("resultat").innerText == '3812') {
+     if( !correctCode.startsWith(enteredSoFar) ) {
         document.getElementById("resultat").innerText = "document.getFucked.innerHTML";
     }
-    
+      if (correctCode==enteredSoFar){
+        document.getElementById('resultat').innerText= "hei og hopp"
+      }
   }
 </script>
 </body>
