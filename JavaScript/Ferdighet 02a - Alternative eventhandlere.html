@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="showdeScropt('<li>onload</li>')">
+
+    <input type="text" onchange="showdeScropt('<li>onchange</li>')" oninput="showdeScropt('<li>oninput</li>')" />
+
+    <h3 onmouseover="showdeScropt('<li>onmouseover</li>')" onmouseout="showdeScropt('<li>onmouseout</li>')">Test test test</h3>
+    <div id="show">sss</div>
+   
+<script>
+    var onload = document.getElementById('show');
+
+function showdeScropt (text) {
+console.log(text)
+onload.innerHTML+=text;
+
+
+
+}
+    </script>
+</body>
+</html>
