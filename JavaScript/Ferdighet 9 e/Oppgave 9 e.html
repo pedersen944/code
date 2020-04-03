@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sitat {
+            font-family: monospace;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <input id="sizeSlider" type="range" min="300" max="500" step="10" oninput="showDiv()"/>
+    <br/>
+    <select id="colorChooser" onchange="showDiv()">
+        <option value="black">Svart</option>
+        <option value="darkblue">Mørk Blå</option>
+        <option value="lightgray">Lys Grå</option>
+        <option value="lightgreen">Lys Grønn</option>
+        <option value="pink">Rosa</option>
+    </select>
+
+    <div id="resultat"></div>
+    <div id="resultatdiv"></div>
+    <div class="sitat" id="sitat">BE BRAVE ENOUGH TO SUCK AT SOMETHING NEW.</div>
+
+    <script>
+        var resultat = document.getElementById('resultat');
+        var resultatdiv = document.getElementById('resultatdiv');
+        var colorChooser = document.getElementById('colorChooser');
+        var sizeSlider = document.getElementById('sizeSlider');
+        var sitat = document.getElementById('sitat');
+
+        showDiv();
+
+        function showDiv() {
+            resultat.innerHTML = '<div style="'
+                + 'background-color: ' + colorChooser.value + ';'
+                + 'width: ' + sizeSlider.value + 'px;'
+                + 'height: ' + sizeSlider.value + 'px;'
+                + '">' + '</div>';
+
+                if (colorChooser.value == "black") {
+                    sitat.style.color="white";
+                }
+                    else (sitat.style.color="black");
+                
+
+            resultatdiv.innerText = resultat.innerHTML;
+        }
+        
+    </script>
+</body>
+</html>
