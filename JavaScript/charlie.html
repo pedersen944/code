@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+   <style>
+    body {
+        background-color: rgb(122, 2, 112);
+    }
+    
+    .style1 {
+    
+        background-color: rgb(165, 14, 59);
+    }
+    
+    .style2 {
+    
+        border: solid;
+        border-color: rgb(250, 91, 125);
+    }
+    
+    .style3 {
+    
+        padding: 20px;
+    }
+    
+    .style4 {
+        color: rgb(255, 139, 164);
+    }
+    
+    
+    div.selected::before {
+        content: "🡆";
+    }
+    
+    div.selected::after {
+        content: "🡄";
+    }
+    </style>
+</head>
+<body>
+    <h2>Click a text and choose a check to choose style</h2>
+
+    <div id="bla" onclick="choosery(this)">Bla bla bla</div>
+
+    <input id="chk" type="checkbox" onchange="toggleStyle('style1',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style2',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style3',this)" />
+    <input id="chk" type="checkbox" onchange="toggleStyle('style4',this)" />
+  <div id="wololo" onclick="choosery(this)">Wololo</div>
+
+
+    <script>
+        var bla = document.getElementById('bla')
+        var wololo = document.getElementById('wololo')
+
+        function choosery(thechosenone) {
+            thechosenone.classList.toggle("selected");
+        
+        }
+
+        function toggleStyle(cssClassName, chkBox) {
+
+            bla.classList.toggle(cssClassName, chkBox.checked);
+            wololo.classList.toggle(cssClassName, chkBox.checked);
+        }
+
+        
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Extreme intense sorting</title>
+</head>
+<body>
+    <p>Ferdighet 9d - Valgsetninger - Sammenligne flere ting på en gang (og)</p>
+    
+    
+
+    <ul>
+        <li>Endre på tekstene!</li>
+        <li>Prøv også å fylle ut tall: 11, 101, 102</li>
+    </ul>
+    <input type="text" id="txt1" oninput="findFirst()" value="Per" /><br />
+    <input type="text" id="txt2" oninput="findFirst()" value="Pål" /><br />
+    <input type="text" id="txt3" oninput="findFirst()" value="Espen" /><br />
+    <input type="text" id="txt4" oninput="findFirst()" value="Trollet"/><br />
+
+   <div id="info"></div>
+
+    <script>
+        var infoDiv = document.getElementById('info')
+
+        var txtDiv1 = document.getElementById('txt1');
+        var txtDiv2 = document.getElementById('txt2');
+        var txtDiv3 = document.getElementById('txt3');
+        var txtDiv4 = document.getElementById('txt4');
+        findFirst();
+
+        function findFirst() {
+        var text1 = txtDiv1.value;
+        var text2 = txtDiv2.value;
+        var text3 = txtDiv3.value;
+        var text4 = txtDiv4.value;
+
+        var liste = [ text1 , text2, text3 , text4 ]
+        liste.sort();
+        document.getElementById("info").innerHTML = '<li>' + liste.join('<li>');
+        }
+        
+
+
+    </script>
+</body>
+</html>
