@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(63, 63, 63);
+        }
+
+        img {
+            cursor: pointer;
+            border: solid;
+            border-width: 5px;
+            border-color: rgb(173, 23, 73);
+            background-color: rgb(255, 159, 218);
+        }
+
+        div {
+            float: left;
+            font-family: monospace;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        @font-face {
+            font-family:WildWestShadow;
+            src:url("WildWestShadow.ttf");
+        }
+
+        h1 {
+            font-family: WildWestShadow;
+            font-size: 350%;
+            color: rgb(0, 0, 0);
+            
+        }
+
+        p {
+            font-family: monospace;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        h2 {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Choose your fave villain</h1>
+    <img onclick="myFunction(1)" src="joe.png">
+    <img onclick="myFunction(2)" src="baskin.png">
+    <img onclick="myFunction(3)" src="jeff.png">
+    <br>
+  
+
+<div id="kusma"></div>
+<br>
+<p id="astma"></p>
+<p id="pest"></p>
+<h2 id="segment"></h2>
+
+
+<script>
+var astma = document.getElementById('astma');
+var kusma = document.getElementById('kusma');
+var pest = document.getElementById('pest');
+var segment = document.getElementById('segment');
+
+function myFunction(value) {
+  var x = Math.floor((Math.random() * 3) + 1);
+  var y = value;
+
+        
+        if (x == 1) {
+            astma.innerText = 'Computer have chosen Joe';
+        }
+        if (x == 2) {
+            astma.innerText = 'Computer have chosen Baskin';
+        }
+        if (x == 3) {
+            astma.innerText = 'Computer have chosen Jeff';
+        }
+
+        if (y == 1) {
+            kusma.innerText = 'You have chosen Joe';
+        }
+        if (y == 2) {
+            kusma.innerText = 'You have chosen Carole Baskin';
+        }
+        if (y == 3) {
+            kusma.innerText = 'You have chosen Jeff';
+        }
+
+        if (x==y) {
+            pest.innerHTML = 'Draw';
+            segment.innerText = '';
+        }
+
+        if (x == 1 | y == 1 && y == 2 | x == 2) {
+            pest.innerText = 'Joe Exotic wins';
+            segment.innerText = '"I’m Joe Exotic, otherwise known as the Tiger King, the gay, gun-carrying redneck with a mullet."';
+        }
+
+        if (x == 2 | y == 2 && y == 3 | x == 3) {
+            pest.innerText = 'Carole Baskin wins';
+            segment.innerText = '“You can see how they go from being so sweet to tearing your face off, just like that, and it’s AMAZING to have that range.”';
+        }
+
+        if (x == 3 | y == 3 && y == 1 | x == 1) {
+            pest.innerText = 'Jeff Lowe wins';
+            segment.innerText = '"THAT’S ILLEGAL"- Criminal Jeff Lowe';
+        }
+
+        
+   }
+  
+   
+
+  
+    
+/**
+    var compare = function(choice1, choice2) {
+    if(choice1 === choice2) {
+    return "The result is a tie!";
+}
+if (choice1 === "paper") {
+    if (choice2 === "rock") {
+        return "paper wins";
+    } else {
+        if (choice2 === "scissors") {
+            return "scissors wins";
+        }
+    }
+    if (choice1 === "scissors") {
+        if (choice2 === "rock") {
+            return "rock wins";
+        } else {
+            if (choice2 === "paper") {
+                return "scissors wins";
+            }
+        }
+    }
+}
+}
+  */
+
+</script>
+</body>
+</html>
