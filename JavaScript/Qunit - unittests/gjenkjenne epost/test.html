@@ -18,8 +18,8 @@
             assert.equal(actual, expected);
         });
     QUnit.test("check - 'mellomrom'", function (assert) {
-            const actual = isEmailSpacedOut('sperm hval@gmail.com ');
-            const expected = ('spermhval@gmail.com');
+            const actual = isEmail('sperm hval@gmail.com ');
+            const expected = false;
             assert.equal(actual, expected);
         });
 

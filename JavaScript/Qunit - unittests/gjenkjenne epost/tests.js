@@ -1,17 +1,19 @@
 function isEmail(txt) {
-   
-    if 
-   (txt.indexOf('@'));
-    return true ;
-    }
-    
-    function isEmailSpacedOut(txt){
-        if(txt.indexOf(' ') >= 0){
-            console.log("contains spaces");
-        
-            txt.trim();
-            return txt.trim();
-        }
+    if (txt.includes("@") ) {
+        let indexOfAt = txt.indexOf("@");
+        let firstDotIndex = txt.indexOf(".");
+        let findSecondDotIndex = txt.substring(indexOfAt).indexOf(".");
+        if(firstDotIndex < findSecondDotIndex){
 
+            return true;
+        }
+        else return false;
     }
+    else return false;
+}
+    
+
+   
+
+    
     
