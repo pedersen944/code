@@ -17,9 +17,20 @@
             const expected = true;
             assert.equal(actual, expected);
         });
-    QUnit.test("check - 'mellomrom'", function (assert) {
+    QUnit.test("check - 'spaces'", function (assert) {
             const actual = isEmail('sperm hval@gmail.com ');
-            const expected = false;
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+        QUnit.test("Contains No Spaces ", function (assert) {
+            const actual = isEmail('spermhval@gmail.com');
+            const expected = true;
+            assert.equal(actual, expected);
+        });
+
+        QUnit.test("Contains dots and spaces ", function (assert) {
+            const actual = isEmail('sperm .hval@gmail.com');
+            const expected = true;
             assert.equal(actual, expected);
         });
 

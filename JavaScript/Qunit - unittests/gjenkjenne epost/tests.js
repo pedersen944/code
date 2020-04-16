@@ -1,15 +1,16 @@
 function isEmail(txt) {
-    if (txt.includes("@") ) {
+    if (txt.includes("@")) return true;
+    
+    
         let indexOfAt = txt.indexOf("@");
         let firstDotIndex = txt.indexOf(".");
-        let findSecondDotIndex = txt.substring(indexOfAt).indexOf(".");
-        if(firstDotIndex < findSecondDotIndex){
-
-            return true;
-        }
-        else return false;
-    }
-    else return false;
+        if (firstDotIndex== -1 || firstDotIndex > indexOfAt) return false;
+        
+        let SecondDotIndex = txt.indexOf(".", indexOfAt);
+        return SecondDotIndex >= 0;
+        
+        
+    
 }
     
 
