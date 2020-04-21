@@ -19,7 +19,7 @@
         });
     QUnit.test("check - 'spaces'", function (assert) {
             const actual = isEmail('sperm hval@gmail.com ');
-            const expected = true;
+            const expected = false;
             assert.equal(actual, expected);
         });
         QUnit.test("Contains No Spaces ", function (assert) {
@@ -29,7 +29,7 @@
         });
 
         QUnit.test("Contains dots and spaces ", function (assert) {
-            const actual = isEmail('sperm .hval@gmail.com');
+            const actual = isEmail('sperm hval.@gmail.com');
             const expected = true;
             assert.equal(actual, expected);
         });

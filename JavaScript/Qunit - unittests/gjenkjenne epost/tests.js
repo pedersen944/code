@@ -1,5 +1,5 @@
 function isEmail(txt) {
-    if (txt.includes("@")) return true;
+    if (txt.includes("@")  && !txt.includes(" ")) return true;
     
     
         let indexOfAt = txt.indexOf("@");
