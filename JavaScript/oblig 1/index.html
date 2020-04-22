@@ -11,5 +11,15 @@
   <div id="qunit-fixture"></div>
   <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
   <script src="lib.js"></script>
+  <script>
+    
+   
+        
+        QUnit.test("Denne skal funke", function (assert) {
+            var acceptableDate = isYearValid('31.01.1985');
+            assert.equal(acceptableDate, true);
+        });
+
+  </script>
 </body>
 </html>
