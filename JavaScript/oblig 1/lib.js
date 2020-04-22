@@ -9,9 +9,7 @@ function isThisOk(dato){
 // Teksten må ha lengde 10.
 
 function isDateLengthValid(dato) {
-    if (dato.length == '10' ){
-        return true;
-    }
+    return dato.length == 10 
     
 }
 
@@ -25,7 +23,7 @@ function isDotsValid(dato){
 
 function isYearValid(dato){
     var year = dato.substring(6);
-    year.length === 4 && year >= '0000' && year <= '9999';
+    return year.length === 4 && year >= '0000' && year <= '9999';
 }
 
 //Måned er fra og med 01 til og med 12. Kan sjekkes som over.
@@ -47,7 +45,7 @@ function isYearMonthsDay (dato){
     var isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     var isMonthThirty = month == '04' || month ==  '06' || month ==  '09' || month ==  '11';
     return day >= '01' && day <= '28'
-      || day == '29' && (!isFebruary|| isLeapYear)
+      || day == '29' && (!isFebruary || isLeapYear)
       || day == '30' && (!isFebruary)
       || day == '31' && !isFebruary && !isMonthThirty;
 }
