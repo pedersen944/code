@@ -1,4 +1,4 @@
-function isThisOk(dato){
+function isDateValid(dato){
     return isDateLengthValid(dato)
         && isDotsValid(dato)
         && isYearValid(dato)
@@ -45,7 +45,7 @@ function isYearMonthsDay (dato){
     var isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     var isMonthThirty = month == '04' || month ==  '06' || month ==  '09' || month ==  '11';
     return day >= '01' && day <= '28'
-      || day == '29' && (!isFebruary || isLeapYear)
+      || day == '29' && (isLeapYear || !isFebruary )
       || day == '30' && (!isFebruary)
       || day == '31' && !isFebruary && !isMonthThirty;
 }
