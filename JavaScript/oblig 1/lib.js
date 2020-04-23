@@ -41,11 +41,13 @@ function isYearMonthsDay (dato){
     var day = dato.substring (0, 2);
     var month = dato.substring (3, 5);
     var year = dato.substring (6);
-    var isFebruary = month =='2';
-    var isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    var isFebruary = month =='02';
+    
     var isMonthThirty = month == '04' || month ==  '06' || month ==  '09' || month ==  '11';
+    var isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+    // console.log(isLeapYear)
     return day >= '01' && day <= '28'
-      || day == '29' && (isLeapYear || !isFebruary )
+      || day == '29' && (!isFebruary ||isLeapYear  )
       || day == '30' && (!isFebruary)
       || day == '31' && !isFebruary && !isMonthThirty;
 }

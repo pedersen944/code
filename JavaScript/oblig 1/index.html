@@ -16,12 +16,12 @@
    
         
        
-    QUnit.test("true - Valid Date (length, points, year bigger than '0000', month from '01 - 12' and days from '01 - 28' ", function (assert) {
+    QUnit.test("true - Valid Date (length, dots, year bigger than '0000', month from '01 - 12' and days from '01 - 28' ", function (assert) {
             const acceptableDate = isDateValid('15.05.1985');
             assert.equal(acceptableDate, true);
         });
         
-        QUnit.test("true - 31 er lovlig for januar, mars, mai, juli, august, oktober og desember", function (assert) {
+        QUnit.test("true - 31 er lov for januar, mars, mai, juli, august, oktober og desember", function (assert) {
             const acceptableDate = isDateValid('31.01.1985');
             assert.equal(acceptableDate, true);
         });
@@ -58,13 +58,13 @@
             assert.equal(acceptableDate, false);
         });
 
-        QUnit.test("false - Point at third and seventh position", function (assert) {
-            const acceptableDate = isDateValid('3.1052.020');
+        QUnit.test("false - dots at third and sixth position", function (assert) {
+            const acceptableDate = isDateValid('3.1232.020');
             assert.equal(acceptableDate, false);
         });
 
         QUnit.test("false - Year is between 0000 and 9999", function (assert) {
-            const acceptableDate = isDateValid('31.05.12345');
+            const acceptableDate = isDateValid('31.05.20200');
             assert.equal(acceptableDate, false);
         });
 
