@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.9.2.css">
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.9.2.js"></script>
+  <script src="controller.js"></script>
+
+  <script>
+
+   function show() { }
+
+    //model
+
+    let numbers;
+    let selectedBar;
+    let disabledButton;
+    let barInputWarning;
+    let inputValue;
+
+    function tester() {
+      numbers = [7, 3, 1, 5, 8];
+      barInputWarning = null;
+    }
+    
+    QUnit.test("Velg stolpe - gyldig", function (assert) {
+      tester();
+      selectedBar = 3;
+      selectBar();
+      assert.equal(numbers[2], 1);
+      assert.deepEqual(numbers, [7, 3, 1, 5, 8])
+    });
+
+    QUnit.test("Velg stolpe - ugyldig", function (assert) {
+      tester();
+      selectedBar = 9;
+      selectBar();
+      assert.equal(numbers[7], null);
+      assert.equal(barInputWarning, null);
+      assert.deepEqual(numbers, [7, 3, 1, 5, 8])
+    });
+
+
+    QUnit.test("Endre stolpe - gyldig", function (assert) {
+      tester();
+      inputValue = 7;
+      selectedBar = 3;
+      editBar();
+      assert.equal(numbers[2], 7);
+      assert.equal(barInputWarning, null);
+      assert.deepEqual(numbers, [7, 3, 7, 5, 8])
+    });
+
+
+    QUnit.test("Endre stolpe - ugyldig", function (assert) {
+      tester();
+      inputValue = 17;
+      selectedBar = 3;
+      editBar();
+      assert.equal(numbers[2], 1);
+      assert.equal(barInputWarning, "Verdi må være mellom 1 og 10");
+      assert.deepEqual(numbers, [7, 3, 1, 5, 8]);
+    });
+
+    QUnit.test("Fjern stolpe", function (assert) {
+      tester();
+      selectedBar = 2;
+      removeBar();
+      assert.equal(numbers.length, 4);
+      assert.deepEqual(numbers, [7, 1, 5, 8]);
+    });
+
+    QUnit.test("Legg til stolpe", function (assert) {
+      tester();
+      inputValue = 5;
+      addBar();
+      assert.equal(numbers[5], 5);
+      assert.equal(barInputWarning, null);
+      assert.deepEqual(numbers, [7, 3, 1, 5, 8, 5]);
+    });
+
+    
+
+  </script>
+</body>
+
+</html>
