@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MainPage</title>
+</head>
+
+<body>
+  <div class="grid-container">
+      <div class="grid-item grid-item-1">
+        
+        <div class="headerdiv1">Du er logget inn som 'CSSKANDØ'</div>
+        <img class="logo" src="vgo_logo.jpg" alt="VGO-stasjonen" onclick="retur()" >
+        <div class="headerdiv2">
+            
+            <button class="info" onclick="about()">Om oss</button>
+            <button class="tests" onclick="test()">test deg selv</button>
+            <button class="profile">profil</button>
+            <button class="chat">chat</button>
+          </div>
+        
+      </div>
+      <div class="grid-item grid-item-2">infobox/feed, her kan det legges til artikler eller annet nyttig</div>
+      <div id="scoreboard" class="grid-item grid-item-3">Scoreboard</div>
+      <div id="planbox" class="grid-item grid-item-4">ukentlig plan</div>
+      
+      <script src="script.js"></script>
+  </div>
+</body>
+</html>

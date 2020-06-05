@@ -3,12 +3,12 @@
 function selectBar (barNumber){
    // console.log("jeg kjører AF!")
    
-    if (selectedBar != barNumber) {
-        selectedBar = barNumber;
-        disabledButton = false;} else {
+    if (selectedBar == barNumber) {
         disabledButton = true;
         selectedBar = 'Ingen'
-    }
+    } else {
+        selectedBar = barNumber;
+        disabledButton = false;}
         
         show();
 }
