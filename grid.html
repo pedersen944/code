@@ -8,36 +8,38 @@
         body {
             padding: 0;
             margin: 0;
+            text-align: center;
         }
         div.page{
             height: 100vh;
             display: grid;
             grid-template-columns: 200px 1fr  ;
-            grid-template-rows: 20px 10fr 20px ;
-            grid-template-areas: 'menu header'
+            grid-template-rows: 40px 100px 300px ;
+            grid-template-areas: 'header header'
                                  'menu mainContent'
-                                 'footer footer';
+                                 'menu footer';
         } 
         div.header{
             background-color: aqua;
             grid-area: header;
+            
         }
         div.menu{
             background-color: aquamarine;
             grid-area: menu ;
         }
         div.mainContent{
-            background-color: blanchedalmond;
+            background-color: green;
             grid-area: mainContent ;
         }
         div.footer{
-            background-color: red;
+            background-color: blue;
             grid-area: footer ;
         }
         @media only screen and (max-width: 600px) {
             div.page {
                 grid-template-columns: 1fr;
-                grid-template-rows: 20px 1fr 4fr 20px;
+                grid-template-rows: 40px 200px 100px 10px;
                 grid-template-areas: 'header' 
                                      'menu'
                                      'mainContent'
@@ -50,9 +52,9 @@
 <body>
     <div class="page">
    <div class="header">header</div> 
-   <div class="menu">menu</div> 
-   <div class="mainContent">mainContent</div> 
-   <div class="footer">footer</div>
+   <div class="menu">infobox</div> 
+   <div class="mainContent">scorebox</div> 
+   <div class="footer">planbox</div>
     </div> 
 </body>
 </html>
