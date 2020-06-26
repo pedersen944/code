@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loginbox {
+            text-align: center;
+            padding-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id=loggedIn>
+
+        <div class="loginbox" id="formContainer">
+            <input type="text" placeholder="Brukernavn" id="email">
+            <input type="password" placeholder="Passord" id="password">
+            
+            
+            <button onclick="logIn()"> Logg inn </button>
+            
+            
+        </div>
+    </div>
+        
+    <script>
+        
+        function logIn(login){
+            
+            document.getElementById('loggedIn').innerHTML= 'du er logget inn';
+        }
+            console.log(counter);
+        
+
+    </script>
+</body>
+</html>

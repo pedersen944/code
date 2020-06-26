@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><h1>Velg deg et grusomt fotballag</h1></div>
+    <div id="test"></div>
+    <button onclick="chooseWorstTeam()">trykk her!</button>
+    <script>
+        let model = {
+    teams: ['Chelsea','liverpool', 'Leeds', 'Manchester City' ]
+    
+}
+function chooseWorstTeam() {
+    var text='';
+    for (let i = model.teams.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [model.teams[i], model.teams[j]] = [model.teams[j], model.teams[i]];
+        text =  model.teams[i,j]+', æsjameg så trist og vondt.';
+    }
+document.getElementById('test').innerHTML=text;
+    
+}
+    </script>
+</body>
+</html>
