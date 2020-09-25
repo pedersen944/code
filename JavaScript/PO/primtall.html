@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="listPrimes()">
+    <h1>primtall fra 1-100</h1>
+    <div id="listeMedTall"></div>
+
+    <script>
+      var primtall = [2], erPrimtall;
+
+      for (var i = 3; i <= 100; i += 2) {
+        erPrimtall = true;
+        for (var j = 0; j < primtall.length; j++) {
+          if (i % primtall[j] == 0) {
+            erPrimtall = false;
+            break;
+          }
+        }
+        if (erPrimtall) {
+          primtall.push(i);
+        }
+      }
+
+      function listPrimes() {
+        document.getElementById("listeMedTall").innerText = primtall;
+      }
+    </script>
+  </body>
+</html>
