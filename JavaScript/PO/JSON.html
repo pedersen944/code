@@ -7,16 +7,18 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 <body>
-    <button onclick="hentData()"> Hent vits</button>
+    
+  <div id="content">
+  <button id="btn" onclick="hentData()"> Hent vits</button>
 
     <div id="vits"></div>
-
+  </div>
 
 
 <script>
  let vitsDiv = document.getElementById("vits");
-
-
+let content = document.getElementById("content");
+let btn = document.getElementById("btn") + new btn;
  async function hentData(){
   // let counter = 0;
   // counter++;
@@ -30,6 +32,9 @@
     let vits = resultat.data;
 
     vitsDiv.innerHTML += vits.value + '<br>';
+    new btn;
+    
+
  }
 
 </script>
