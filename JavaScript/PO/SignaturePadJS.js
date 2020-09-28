@@ -20,30 +20,23 @@ document.getElementById("save-png").addEventListener("click", function () {
   }
 
   var data = signaturePad.toDataURL();
-  console.log(data)
-  
-  
+  console.log(data);
 });
-
-
 
 document.getElementById("clear").addEventListener("click", function () {
   signaturePad.clear();
 });
 
-
-
 async function getTimeAndIp() {
   let d = new Date().toLocaleTimeString();
-  
+
   let result = await axios.get("https://api.ipify.org?format=json");
   let ip = result.data;
-  let myJSON= JSON.stringify(ip)
+  let myJSON = JSON.stringify(ip);
 
-  let totalpakkestring = d + myJSON; 
+  let totalpakkestring = d + myJSON;
   var c = document.getElementById("signature-pad");
-        var ctx = c.getContext("2d");
-        ctx.font = "8px Arial";
-        ctx.fillText(totalpakkestring, 10, 40);
-
+  var ctx = c.getContext("2d");
+  ctx.font = "8px Arial";
+  ctx.fillText(totalpakkestring, 10, 40);
 }
