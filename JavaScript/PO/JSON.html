@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-<body>
-    
-  <div id="content">
-  <button id="btn" onclick="hentData()"> Hent vits</button>
+  <body>
+    <div id="content">
+      <button id="btn" onclick="hentData()">Hent vits</button>
 
-    <div id="vits"></div>
-  </div>
+      <div id="vits"></div>
+    </div>
 
+    <script>
+      let btn = document.getElementById("btn");
+      let vitsDiv = document.getElementById("vits");
+      let content = document.getElementById("content");
+      async function hentData() {
+        // let counter = 0;
+        // counter++;
+        // if (counter > 10){
+        //   break;
+        // }
+        // else{
 
-<script>
- let vitsDiv = document.getElementById("vits");
-let content = document.getElementById("content");
-let btn = document.getElementById("btn") + new btn;
- async function hentData(){
-  // let counter = 0;
-  // counter++;
-  // if (counter > 10){
-  //   break;
-  // }  
-  // else{ 
-  
-  let resultat = await axios.get('https://api.chucknorris.io/jokes/random') 
+        let resultat = await axios.get(
+          "https://api.chucknorris.io/jokes/random"
+        );
 
-    let vits = resultat.data;
+        let vits = resultat.data;
 
-    vitsDiv.innerHTML += vits.value + '<br>';
-    new btn;
-    
-
- }
-
-</script>
-</body>
+        vitsDiv.innerHTML += vits.value + "<br>";
+      }
+    </script>
+  </body>
 </html>
