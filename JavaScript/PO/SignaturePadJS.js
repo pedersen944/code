@@ -19,41 +19,31 @@ document.getElementById("save-png").addEventListener("click", function () {
     return alert("Please provide a signature first.");
   }
 
-  var data = signaturePad.toDataURL("image/png");
-
-  console.log(data);
-  window.open(data);
+  var data = signaturePad.toDataURL();
+  console.log(data)
+  
+  
 });
 
-// document.getElementById("save-jpeg").addEventListener("click", function () {
-//   if (signaturePad.isEmpty()) {
-//     return alert("Please provide a signature first.");
-//   }
 
-//   var data = signaturePad.toDataURL("image/jpeg");
-//   console.log(data);
-//   window.open(data);
-// });
-
-// document.getElementById("save-svg").addEventListener("click", function () {
-//   if (signaturePad.isEmpty()) {
-//     return alert("Please provide a signature first.");
-//   }
-
-//   var data = signaturePad.toDataURL("image/svg+xml");
-//   console.log(data);
-//   console.log(atob(data.split(",")[1]));
-//   window.open(data);
-// });
 
 document.getElementById("clear").addEventListener("click", function () {
   signaturePad.clear();
 });
 
-let d = new Date();
+
+
 async function getTimeAndIp() {
-  let resultat = await axios.get("https://api.ipify.org?format=json");
-  let ip = resultat.data;
-  console.log(d);
-  console.log(ip);
+  let d = new Date().toLocaleTimeString();
+  
+  let result = await axios.get("https://api.ipify.org?format=json");
+  let ip = result.data;
+  let myJSON= JSON.stringify(ip)
+
+  let totalpakkestring = d + myJSON; 
+  var c = document.getElementById("signature-pad");
+        var ctx = c.getContext("2d");
+        ctx.font = "8px Arial";
+        ctx.fillText(totalpakkestring, 10, 40);
+
 }

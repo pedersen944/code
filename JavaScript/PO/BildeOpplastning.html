@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
-    <input type="file" />
-    <img id="myImg" src="#" alt="opplastet bilde" />
-    
+</head>
+
+<body>
+    <input type="file" id="fileUpload" />
+    <button onclick="upload()">Last opp</button>
+    <div id="imgs"></div>
+
     <script>
-      
+        function upload() {
+            document.getElementById('imgs').innerHTML = `        
+                <img width ="10%"/>
+                <img width ="25%"/>
+                <img width ="50%"/>
+                
+                `;
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                for (let img of document.getElementsByTagName('img')) {
+                    img.src = e.target.result;
+                }
+            }
+            let uploadTag = document.getElementById('fileUpload');
+            reader.readAsDataURL(uploadTag.files[0]);
+        }
     </script>
-  </body>
+</body>
+
 </html>
