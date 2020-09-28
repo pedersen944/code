@@ -25,26 +25,26 @@ document.getElementById("save-png").addEventListener("click", function () {
   window.open(data);
 });
 
-document.getElementById("save-jpeg").addEventListener("click", function () {
-  if (signaturePad.isEmpty()) {
-    return alert("Please provide a signature first.");
-  }
+// document.getElementById("save-jpeg").addEventListener("click", function () {
+//   if (signaturePad.isEmpty()) {
+//     return alert("Please provide a signature first.");
+//   }
 
-  var data = signaturePad.toDataURL("image/jpeg");
-  console.log(data);
-  window.open(data);
-});
+//   var data = signaturePad.toDataURL("image/jpeg");
+//   console.log(data);
+//   window.open(data);
+// });
 
-document.getElementById("save-svg").addEventListener("click", function () {
-  if (signaturePad.isEmpty()) {
-    return alert("Please provide a signature first.");
-  }
+// document.getElementById("save-svg").addEventListener("click", function () {
+//   if (signaturePad.isEmpty()) {
+//     return alert("Please provide a signature first.");
+//   }
 
-  var data = signaturePad.toDataURL("image/svg+xml");
-  console.log(data);
-  console.log(atob(data.split(",")[1]));
-  window.open(data);
-});
+//   var data = signaturePad.toDataURL("image/svg+xml");
+//   console.log(data);
+//   console.log(atob(data.split(",")[1]));
+//   window.open(data);
+// });
 
 document.getElementById("clear").addEventListener("click", function () {
   signaturePad.clear();

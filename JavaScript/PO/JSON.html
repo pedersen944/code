@@ -17,21 +17,25 @@
       let btn = document.getElementById("btn");
       let vitsDiv = document.getElementById("vits");
       let content = document.getElementById("content");
+      
+      let counter = 0;
+
       async function hentData() {
         // let counter = 0;
-        // counter++;
-        // if (counter > 10){
-        //   break;
-        // }
-        // else{
-
+        counter++;
+         if (counter >= 11){
+           return;
+       }
+        
+          console.log(counter)
         let resultat = await axios.get(
           "https://api.chucknorris.io/jokes/random"
         );
 
         let vits = resultat.data;
 
-        vitsDiv.innerHTML += vits.value += content.innerHTML + "<br>";
+        
+vitsDiv.innerHTML += vits.value + '<button id="btn" onclick="hentData()">Hent vits</button>' + "<br>";
       }
     </script>
   </body>
